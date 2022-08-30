@@ -1,0 +1,22 @@
+{% extends "index.html" %}
+
+
+{% block card %}
+
+
+
+
+{% for products in products %}
+<div class="card" style="width: 18rem;">
+    <img src="..." class="card-img-top" alt="...">
+    <div class="card-body">
+      <a href="{{products.get_absolute_url}}"><h5 class="card-title">{{products.title}}</h5></a>
+      <p class="card-text">{{products.description | slice:":200"}}</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+{% endfor %}
+
+
+
+{% endblock %}
